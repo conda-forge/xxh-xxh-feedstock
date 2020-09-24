@@ -1,5 +1,5 @@
 {% set name = "xxh-xxh" %}
-{% set version = "0.8.5" %}
+{% set version = "0.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 19cab133a5ccd15dc84adcebcaaada66275028f9c649eb57b7cee2cf013f5440
+  sha256: c35f828c937a34d0ca98797984ac8457a4906ab75dbb38a1ab8843142ff765de
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Bring your favorite shell wherever you go through the ssh'
+  summary: Bring your favorite shell wherever you go through the ssh
   doc_url: https://github.com/xxh/xxh/blob/master/README.md
   dev_url: https://github.com/xxh/xxh
 
